@@ -1,0 +1,70 @@
+{
+    "network": {
+        "max-length": 50,
+        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format": "{ifname}",
+        "format-disconnected": "",
+        "format-ethernet": "{ifname} ",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format": "{ifname}",
+        "interface": "wlan0"
+    },
+    "pulseaudio": {
+        "on-click": "pavucontrol",
+        "scroll-step": 1,
+        "format-icons": {
+            "default": [
+                "",
+                ""
+            ],
+            "car": "",
+            "portable": "",
+            "phone": "",
+            "headset": "",
+            "handsfree": "",
+            "headphones": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": ""
+        },
+        "format-muted": "",
+        "format-bluetooth": "{volume}% {icon}",
+        "format": "{volume}% {icon}"
+    },
+    "tray": {
+        "spacing": 10,
+        "icon-size": 21
+    },
+    "clock": {
+        "format": "{:%a, %d. %b  %H:%M}",
+        "interval": 60
+    },
+    "battery": {
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format": "{capacity}% {icon}"
+    },
+    "sway/window": {
+        "max-length": 50
+    },
+    "modules-right": [
+        "battery",
+        "pulseaudio",
+        "network",
+        "clock",
+        "tray"
+    ],
+    "modules-center": [
+        "sway/window"
+    ],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "layer": "top"
+}
