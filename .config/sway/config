@@ -167,6 +167,9 @@ input * {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    # Screenshot entire screen
+    bindsym Print exec grim
 #
 # Scratchpad:
 #
