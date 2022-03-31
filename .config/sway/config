@@ -27,7 +27,7 @@ for_window [app_id=".*"] opacity $opacity
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/ghibli2.jpg fill
+output * bg ~/Downloads/arch5.png fit
 output HDMI-A-1 pos 0 0
 output eDP-1 pos 1920 450
 #
