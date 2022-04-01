@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term xfce4-terminal
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -27,7 +27,7 @@ for_window [app_id=".*"] opacity $opacity
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/arch5.png fit
+output * bg ~/Pictures/endeavourwallpaper.png fill
 output HDMI-A-1 pos 0 0
 output eDP-1 pos 1920 450
 #
@@ -169,7 +169,7 @@ input * {
     bindsym $mod+a focus parent
 
     # Screenshot entire screen
-    bindsym Print exec grim
+    bindsym $mod+p exec grim - | wl-copy
 #
 # Scratchpad:
 #

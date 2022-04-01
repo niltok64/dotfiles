@@ -1,4 +1,38 @@
 {
+    "keyboard-state": {
+        "numlock":"true",
+        "capslock":"true",
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "mpd": {
+         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)"
+        },
     "network": {
         "max-length": 50,
         "tooltip-format-disconnected": "Disconnected",
@@ -22,18 +56,18 @@
             "car": "",
             "portable": "",
             "phone": "",
-            "headset": "",
-            "handsfree": "",
+            "headset": "",
+            "handsfree": "",
             "headphones": "",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo": ""
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": " "
         },
         "format-muted": "",
         "format-bluetooth": "{volume}% {icon}",
         "format": "{volume}% {icon}"
     },
     "tray": {
-        "spacing": 10,
-        "icon-size": 21
+        "spacing": 20,
+        "icon-size": 20
     },
     "clock": {
         "format": "{:%a, %d. %b  %H:%M}",
@@ -56,8 +90,8 @@
         "battery",
         "pulseaudio",
         "network",
-        "clock",
-        "tray"
+        "tray",
+        "clock"
     ],
     "modules-center": [
         "sway/window"
@@ -66,5 +100,6 @@
         "sway/workspaces",
         "sway/mode"
     ],
-    "layer": "top"
+    "layer": "bottom",
+    "position": "top"
 }
