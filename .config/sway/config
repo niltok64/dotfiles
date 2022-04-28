@@ -14,20 +14,20 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term st
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### opacity
-set $opacity 0.99
+set $opacity 0.97
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/linox2.png fit
+output * bg ~/Downloads/shorthike.jpg fit
 output HDMI-A-1 pos 0 0
 output eDP-1 pos 1920 450
 #
@@ -61,7 +61,7 @@ output eDP-1 pos 1920 450
 #       middle_emulation enabled
 #   }
 input * {
-      xkb_layout "gb,gb"
+      xkb_layout "gb, gb"
       xkb_variant ",colemak"
       xkb_options "compose:menu,ctrl:nocaps,grp:lalt_lshift_toggle"
 }
@@ -79,12 +79,14 @@ input * {
     bindsym $mod+Backspace exec emacs
 
     # Show Colemak setup
-    bindsym $mod+Delete exec firefox https://colemak.com/wiki/images/e/ef/Colemak_fingers.png
+    bindsym $mod+Delete exec firefox
 
     # Start Discord
     bindsym $mod+Insert exec discord
 
     bindsym $mod+Home exec steam
+
+    bindsym $mod+End exec swaylock -e
 
     # Start Steam
 # Kill focused window
@@ -247,4 +249,6 @@ bar {
 
 include /etc/sway/config.d/*
 
-gaps inner 11
+gaps inner 15
+default_border none
+default_floating_border none
