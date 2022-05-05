@@ -21,13 +21,13 @@ set $term alacritty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### opacity
-set $opacity 0.97
+set $opacity 0.98
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/shorthike.jpg fit
+output * bg ~/Downloads/arch2.png fit
 output HDMI-A-1 pos 0 0
 output eDP-1 pos 1920 450
 #
@@ -84,9 +84,11 @@ input * {
     # Start Discord
     bindsym $mod+Insert exec discord
 
-    bindsym $mod+Home exec steam
+    # Start steam-native
+    bindsym $mod+Home exec steam-native
 
-    bindsym $mod+End exec swaylock -e
+    # Screenlock
+    bindsym $mod+End exec swaylock -e -c 000000
 
     # Start Steam
 # Kill focused window
